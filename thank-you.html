@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank You - Mamoon Aftab Portfolio">
+  <title>Thank You | Mamoon Aftab</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#8b5cf6">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+
+  <!-- =========================
+        Thank You Section
+  ========================== -->
+  <section class="thank-you-page">
+    <div class="container">
+
+      <!-- Success Icon -->
+      <div class="thank-icon-wrap">
+        <div class="thank-icon-bg"></div>
+        <div class="thank-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <span class="thank-dot thank-dot-1"></span>
+        <span class="thank-dot thank-dot-2"></span>
+        <span class="thank-dot thank-dot-3"></span>
+      </div>
+
+      <!-- Label -->
+      <div class="thank-label">
+        <span class="label-line"></span>
+        MESSAGE SENT
+        <span class="label-line"></span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="thank-title">Thank You!</h1>
+
+      <!-- Message -->
+      <p class="thank-message">
+        Your message has been successfully sent. I'll get back to you as soon as possible.
+        In the meantime, feel free to explore more about my work and services.
+      </p>
+
+      <!-- Buttons -->
+      <div class="thank-buttons">
+        <a href="index.html" class="btn thank-btn-primary">
+          Back to Home <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="https://wa.me/923406703458" target="_blank" rel="noopener" class="btn thank-btn-secondary">
+        <i class="fab fa-whatsapp"></i> WhatsApp Me
+        </a>
+      </div>
+
+
+      <!-- Explore Card -->
+      <div class="explore-card">
+        <div class="explore-icon">
+          <i class="far fa-lightbulb"></i>
+        </div>
+        <div class="explore-content">
+          <span class="explore-label">LET'S BUILD SOMETHING GREAT</span>
+          <h3>Explore My Work</h3>
+          <p>While you're here, check out my latest projects, services, and skills. I'm always open to new opportunities.</p>
+        </div>
+        <a href="index.html#projects" class="explore-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Header/Footer Loader -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
