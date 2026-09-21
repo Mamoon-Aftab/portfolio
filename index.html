@@ -28,27 +28,9 @@
 <body>
 
   <!-- =========================
-          Header / Navbar
+   fatch Header / Navbar
   ========================== -->
-  <header class="header-content">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <h2 class="logo navbar-brand mb-0">Mamoon Aftab</h2>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="nav-links navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+ <div id="header-placeholder"></div>
 
 
   <!-- =========================
@@ -283,7 +265,13 @@
     <h2>Let's Work Together</h2>
 
     <div class="contact-box">
-      <form action="https://formspree.io/f/yourID" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="50783fd8-ea10-4b2c-8753-e117a0d6ce15">
+        <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+        <input type="hidden" name="from_name" value="Mamoon Aftab Portfolio">
+
         <label for="name" class="visually-hidden">Name</label>
         <input id="name" name="name" type="text" placeholder="Name" required>
 
@@ -345,14 +333,9 @@
 
 
   <!-- =========================
-          Footer
-  ========================== -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p class="copyright">© 2026 Mamoon Aftab. All rights reserved.</p>
-      <a href="privacy.html" class="privacy-link">Privacy Policy</a>
-    </div>
-  </footer>
+        Footer Placeholder
+========================== -->
+  <div id="footer-placeholder"></div>
 
 
   <!-- =========================
@@ -405,6 +388,17 @@
     });
   </script>
 
+  <!-- Form Validation Script -->
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      const hiddenInput = document.getElementById('projectTypeInput');
+      if (!hiddenInput.value) {
+        e.preventDefault();
+        alert('Please select a project type before submitting.');
+      }
+    });
+  </script>
+
   <!-- Swiper Init Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -438,6 +432,24 @@
       });
     });
   </script>
+  <!-- Header/Footer Loader -->
+ <script>
+   // Load Header
+   fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Header load error:', error));
+
+   // Load Footer
+   fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Footer load error:', error));
+ </script>
 
 </body>
 </html>
