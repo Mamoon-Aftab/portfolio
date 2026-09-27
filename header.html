@@ -2,11 +2,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark container">
     <h2 class="logo navbar-brand mb-0">Mamoon Aftab</h2>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler mobile-menu-btn" type="button" id="openMobileMenu" aria-label="Open menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mainNav">
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse desktop-menu" id="mainNav">
       <ul class="nav-links navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
@@ -17,3 +18,91 @@
     </div>
   </nav>
 </header>
+
+<!-- =========================
+     Mobile Sidebar Menu
+========================== -->
+<div class="mobile-sidebar-overlay" id="mobileOverlay"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+
+  <!-- Close Button -->
+  <button class="mobile-sidebar-close" id="closeMobileMenu" aria-label="Close menu">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+  <!-- Profile Section -->
+  <div class="mobile-profile">
+    <div class="mobile-profile-img">
+      <img src="./images/Rectangle 14.png" alt="Mamoon Aftab">
+    </div>
+    <h3 class="mobile-profile-name">Mamoon Aftab</h3>
+    <p class="mobile-profile-role">WordPress Developer</p>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="mobile-contact-info">
+    <a href="mailto:gmamoon779@gmail.com" class="mobile-contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>gmamoon779@gmail.com</span>
+    </a>
+    <a href="https://wa.me/923406703458" target="_blank" rel="noopener" class="mobile-contact-item">
+      <i class="fab fa-whatsapp"></i>
+      <span>03406703458</span>
+    </a>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="mobile-nav">
+    <ul>
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html#about" class="mobile-nav-link">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html#services" class="mobile-nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Services</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html#projects" class="mobile-nav-link">
+          <i class="fas fa-folder"></i>
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html#contact" class="mobile-nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Social Media -->
+  <div class="mobile-social">
+    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+</aside>
+
