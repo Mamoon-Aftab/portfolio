@@ -1371,7 +1371,7 @@ form button[type="submit"]:hover {
   max-width: 88vw;
   height: 100vh;
   z-index: 9999;
-  padding: 30px 25px 25px;
+  padding: 30px 25px 40px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -1525,7 +1525,7 @@ form button[type="submit"]:hover {
 }
 
 .mobile-nav {
-  flex: 1;
+  flex-shrink: 0;
 }
 
 .mobile-nav ul {
@@ -1578,8 +1578,10 @@ form button[type="submit"]:hover {
   justify-content: center;
   gap: 12px;
   padding-top: 20px;
+  padding-bottom: 10px;
   border-top: 1px solid rgba(139, 92, 246, 0.2);
-  margin-top: auto;
+  margin-top: 20px;
+  flex-shrink: 0;
 }
 
 .mobile-social a {
@@ -1883,7 +1885,7 @@ form button[type="submit"]:hover {
   }
 
   .mobile-sidebar {
-    padding: 25px 20px 20px;
+    padding: 25px 20px 30px;
     gap: 18px;
     border-radius: 16px 0 0 16px;
   }
